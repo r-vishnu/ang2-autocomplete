@@ -8,12 +8,10 @@ To install this library, run:
 $ npm install ang2-autocomplete --save
 ```
 
-## Consuming your library
-
-Once you have published your library to npm, you can import your library in any Angular application by running:
-
-```bash
-$ npm install ang2-autocomplete
+ add `map` and `packages` to your  `systemjs.config.js`:
+```typescript
+map['ang2-autocomplete'] = 'node_modules/ang2-autocomplete/dist'; 
+packages['ang2-autocomplete'] = { defaultExtension: 
 ```
 
 and then from your Angular `AppModule`:
@@ -24,8 +22,7 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 
-// Import your library
-import { SampleModule } from 'ang2-autocomplete';
+import { Ag2AutocompleteModule } from 'ang2-autocomplete';
 
 @NgModule({
   declarations: [
@@ -33,9 +30,9 @@ import { SampleModule } from 'ang2-autocomplete';
   ],
   imports: [
     BrowserModule,
-
-    // Specify your library as an import
-    LibraryModule
+    FormsModule,
+    HttpModule, 
+    Ag2AutocompleteModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
@@ -43,30 +40,31 @@ import { SampleModule } from 'ang2-autocomplete';
 export class AppModule { }
 ```
 
-Once your library is imported, you can use its components, directives and pipes in your Angular application:
+## Usage it in your code
 
 ```xml
-<!-- You can now use your library component in app.component.html -->
-<h1>
-  {{title}}
-</h1>
-<sampleComponent></sampleComponent>
+<ang2-autocomplete
+  path-to-array="data.SearchUserDetails"
+  [sourceName]="arrayOfStrings"
+  [listFormatter]="test"
+  key-name="formatted_address"
+  url-param-name="query"
+  (onSelectionChane)="onSelectionChane($event)"
+  label-name="search"
+  placeholder="search"
+</ang2-autocomplete>
+
 ```
 
-## Development
+## attributes
+`source`             :  array or string or object contains array, required. data source for dropdown list
+`placeholder`        : string, autocomplete input guide text
+`listFormatter`      : function variable name, custom list formatting function.e.g. 'myListFormatter', not 'myListFormatter()'
+`path-to-array`      : string, e.g., data.myList, path to array data in http response or in object contains array
+`key-name`            : string, key name of value with which we need to filter  
+`url-param`           :string, the name of parameter we need to pass in url-param
+`label-name`          :string, key name of text to show. default is value
+`onSelectionChane`    : callback function that is executed when a new dropdown is selected. e.g. onSelectionChane)="onSelectionChane($event)"
 
-To generate all `*.js`, `*.js.map` and `*.d.ts` files:
 
-```bash
-$ npm run tsc
-```
 
-To lint all `*.ts` files:
-
-```bash
-$ npm run lint
-```
-
-## License
-
-MIT © [Vishnu](vishnur66@gmail.com)
