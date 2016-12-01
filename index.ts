@@ -5,7 +5,7 @@ import { HttpModule }    from '@angular/http';
 import {Ag2AutocompleteComponent} from "./src/ang2autocomplete.component";
 import {Ang2AutoCompleteService} from "./src/ang2autocomplete.service";
 
-export * from './src/sample.component';
+export * from './src/ang2autocomplete.component';
 export * from './src/ang2autocomplete.service';
 
 @NgModule({
