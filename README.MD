@@ -46,7 +46,7 @@ export class AppModule { }
 <ang2-autocomplete
   path-to-array="data.SearchUserDetails"
   [sourceName]="arrayOfStrings"
-  [listFormatter]="test"
+  [listFormatter]="myListFormatter"
   key-name="formatted_address"
   url-param-name="query"
   (onSelectionChane)="onSelectionChane($event)"
