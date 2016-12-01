@@ -57,14 +57,14 @@ export class AppModule { }
 ```
 
 ## attributes
-`source`             :  array or string or object contains array, required. data source for dropdown list
-`placeholder`        : string, autocomplete input guide text
-`listFormatter`      : function variable name, custom list formatting function.e.g. 'myListFormatter', not 'myListFormatter()'
-`path-to-array`      : string, e.g., data.myList, path to array data in http response or in object contains array
-`key-name`            : string, key name of value with which we need to filter  
-`url-param`           :string, the name of parameter we need to pass in url-param
-`label-name`          :string, key name of text to show. default is value
-`onSelectionChane`    : callback function that is executed when a new dropdown is selected. e.g. onSelectionChane)="onSelectionChane($event)"
-
-
-
+             
+```xml
+source              :  array or string or object contains array, required. data source for dropdown list
+placeholder         : string, autocomplete input guide text
+listFormatter       : function variable name, custom list formatting function.e.g. 'myListFormatter', not 'myListFormatter()'
+path-to-array       : string, e.g., data.myList, path to array data in http response or in object contains array
+key-name            : string, key name of value with which we need to filter  
+url-param           :string, the name of parameter we need to pass in url-param
+label-name          :string, key name of text to show. default is value
+onSelectionChane    : callback function that is executed when a new dropdown is selected. e.g. (onSelectionChane)="onSelectionChane($event)"
+```
