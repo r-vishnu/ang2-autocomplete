@@ -22,7 +22,7 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 
-import { Ag2AutocompleteModule } from 'ang2-autocomplete';
+import { Ang2AutocompleteModule } from 'ang2-autocomplete';
 
 @NgModule({
   declarations: [
@@ -32,7 +32,7 @@ import { Ag2AutocompleteModule } from 'ang2-autocomplete';
     BrowserModule,
     FormsModule,
     HttpModule, 
-    Ag2AutocompleteModule,
+    Ang2AutocompleteModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
