@@ -2,7 +2,7 @@ import {NgModule, ModuleWithProviders} from "@angular/core";
 import {CommonModule} from "@angular/common";
 import { FormsModule}        from '@angular/forms';
 import { HttpModule }    from '@angular/http';
-import {Ag2AutocompleteComponent} from "./src/ang2autocomplete.component";
+import {Ang2AutocompleteComponent} from "./src/ang2autocomplete.component";
 import {Ang2AutoCompleteService} from "./src/ang2autocomplete.service";
 
 export * from './src/ang2autocomplete.component';
@@ -15,16 +15,16 @@ export * from './src/ang2autocomplete.service';
     HttpModule
   ],
   declarations: [
-    Ag2AutocompleteComponent
+    Ang2AutocompleteComponent
   ],
   exports: [
-    Ag2AutocompleteComponent
+    Ang2AutocompleteComponent
   ]
 })
-export class Ag2AutocompleteModule {
+export class Ang2AutocompleteModule {
   static forRoot(): ModuleWithProviders {
     return {
-      ngModule: Ag2AutocompleteModule,
+      ngModule: Ang2AutocompleteModule,
       providers: [Ang2AutoCompleteService]
     };
   }

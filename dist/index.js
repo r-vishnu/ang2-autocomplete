@@ -19,16 +19,16 @@ var ang2autocomplete_component_1 = require("./src/ang2autocomplete.component");
 var ang2autocomplete_service_1 = require("./src/ang2autocomplete.service");
 __export(require('./src/ang2autocomplete.component'));
 __export(require('./src/ang2autocomplete.service'));
-var Ag2AutocompleteModule = (function () {
-    function Ag2AutocompleteModule() {
+var Ang2AutocompleteModule = (function () {
+    function Ang2AutocompleteModule() {
     }
-    Ag2AutocompleteModule.forRoot = function () {
+    Ang2AutocompleteModule.forRoot = function () {
         return {
-            ngModule: Ag2AutocompleteModule,
+            ngModule: Ang2AutocompleteModule,
             providers: [ang2autocomplete_service_1.Ang2AutoCompleteService]
         };
     };
-    Ag2AutocompleteModule = __decorate([
+    Ang2AutocompleteModule = __decorate([
         core_1.NgModule({
             imports: [
                 common_1.CommonModule,
@@ -36,15 +36,15 @@ var Ag2AutocompleteModule = (function () {
                 http_1.HttpModule
             ],
             declarations: [
-                ang2autocomplete_component_1.Ag2AutocompleteComponent
+                ang2autocomplete_component_1.Ang2AutocompleteComponent
             ],
             exports: [
-                ang2autocomplete_component_1.Ag2AutocompleteComponent
+                ang2autocomplete_component_1.Ang2AutocompleteComponent
             ]
         }), 
         __metadata('design:paramtypes', [])
-    ], Ag2AutocompleteModule);
-    return Ag2AutocompleteModule;
+    ], Ang2AutocompleteModule);
+    return Ang2AutocompleteModule;
 }());
-exports.Ag2AutocompleteModule = Ag2AutocompleteModule;
+exports.Ang2AutocompleteModule = Ang2AutocompleteModule;
 //# sourceMappingURL=index.js.map

@@ -20,7 +20,7 @@ import { Ang2AutoCompleteService } from './ang2autocomplete.service';
 
         `
 })
-export class Ag2AutocompleteComponent {
+export class Ang2AutocompleteComponent {
   public query = '';
   public elementRef:any;
   pendingRequest:any;

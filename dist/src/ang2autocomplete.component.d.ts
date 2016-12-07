@@ -1,6 +1,6 @@
 import { ElementRef, EventEmitter } from '@angular/core';
 import { Ang2AutoCompleteService } from './ang2autocomplete.service';
-export declare class Ag2AutocompleteComponent {
+export declare class Ang2AutocompleteComponent {
     myElement: ElementRef;
     private getListService;
     query: string;
