@@ -1,5 +1,11 @@
 # ang2-autocomplete
 
+
+##Angular2 Auto Complete
+
+##Live DEMO
+Plunker example: https://plnkr.co/edit/5zRD0fcOZHXEMOk4kupY?p=preview
+
 ## Installation
 
 To install this library, run:
@@ -11,7 +17,9 @@ $ npm install ang2-autocomplete --save
  add `map` and `packages` to your  `systemjs.config.js`:
 ```typescript
 map['ang2-autocomplete'] = 'node_modules/ang2-autocomplete/dist'; 
-packages['ang2-autocomplete'] = { defaultExtension: 
+packages['ang2-autocomplete'] = { defaultExtension:   defaultExtension: 'js',
+  main:'index'
+}
 ```
 
 and then from your Angular `AppModule`:
