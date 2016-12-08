@@ -76,3 +76,8 @@ url-param           :string, the name of parameter we need to pass in url-param
 label-name          :string, key name of text to show. default is value
 onSelectionChane    : callback function that is executed when a new dropdown is selected. e.g. (onSelectionChane)="onSelectionChane($event)"
 ```
+## Note:
+
+We are aborting the previous calls when we are using urls, so the calls will be fast.
+Currently we are working on the css part for auto complete. Now we have to do our own css for look and feet.
+We will implement the min cahr length in next release.
