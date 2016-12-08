@@ -15,10 +15,10 @@ var core_1 = require("@angular/core");
 var common_1 = require("@angular/common");
 var forms_1 = require('@angular/forms');
 var http_1 = require('@angular/http');
-var ang2autocomplete_component_1 = require("./src/ang2autocomplete.component");
-var ang2autocomplete_service_1 = require("./src/ang2autocomplete.service");
-__export(require('./src/ang2autocomplete.component'));
-__export(require('./src/ang2autocomplete.service'));
+var ang2autocomplete_component_1 = require("./ang2autocomplete.component");
+var ang2autocomplete_service_1 = require("./ang2autocomplete.service");
+__export(require('./ang2autocomplete.component'));
+__export(require('./ang2autocomplete.service'));
 var Ang2AutocompleteModule = (function () {
     function Ang2AutocompleteModule() {
     }
