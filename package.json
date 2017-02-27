@@ -1,6 +1,6 @@
 {
   "name": "ang2-autocomplete",
-  "version": "1.1.1",
+  "version": "2.0.0",
   "license": "MIT",
   "scripts": {
     "lint": "tslint src/**/*.ts",
@@ -15,8 +15,11 @@
     "email": "vishnur66@gmail.com"
   },
   "keywords": [ "angular2",
-    "auto-complete",
-    "input",
+    "auto-complete angular2",
+    "angular2 autocomplete" ,
+    "angular2 auto complete" ,
+    "dropdown autocomplete",
+    "html input autocomplet"
     "angular2-autocomplete" ],
     "typings": "./dist/index.d.ts",
     "dependencies": {
