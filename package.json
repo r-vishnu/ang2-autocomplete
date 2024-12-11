@@ -1,10 +1,12 @@
 {
   "name": "ang2-autocomplete",
-  "version": "2.0.0",
-  "license": "MIT",
-  "scripts": {
-    "lint": "tslint src/**/*.ts",
-    "test": "tsc && karma start"
+  "version": "2.1.0",
+  "peerDependencies": {
+    "@angular/common": "^19.0.0",
+    "@angular/core": "^19.0.0"
+  },
+  "dependencies": {
+    "tslib": "^2.3.0"
   },
   "repository": {
     "type": "git",
@@ -14,32 +16,23 @@
     "name": "Vishnu",
     "email": "vishnur66@gmail.com"
   },
+  "sideEffects": false,
   "keywords": [ "angular2",
     "auto-complete angular2",
     "angular2 autocomplete" ,
     "angular2 auto complete" ,
     "dropdown autocomplete",
-    "html input autocomplet"
+    "html input autocomplet",
     "angular2-autocomplete" ],
-    "typings": "./dist/index.d.ts",
-    "dependencies": {
+  "module": "fesm2022/ang2-autocomplete.mjs",
+  "typings": "index.d.ts",
+  "exports": {
+    "./package.json": {
+      "default": "./package.json"
     },
-    "devDependencies": {
-      "@angular/core": "^2.0.0",
-      "@angular/common": "^2.0.0",
-      "@angular/compiler": "2.0.0",
-      "@angular/http": "~2.1.2",
-      "@angular/platform-browser": "2.0.0",
-      "@angular/platform-browser-dynamic": "2.0.0",
-      "@angular/forms": "~2.2.0",
-      "codelyzer": "^0.0.20",
-      "rxjs": "5.0.0-beta.12",
-      "tslint": "^3.15.1",
-      "typescript": "2.0.2",
-      "typings":"^1.0.4",
-      "zone.js": "0.6.23"
-    },
-    "engines": {
-      "node": ">=0.8.0"
+    ".": {
+      "types": "./index.d.ts",
+      "default": "./fesm2022/ang2-autocomplete.mjs"
     }
+  }
 }
