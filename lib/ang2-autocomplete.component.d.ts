@@ -1,0 +1,35 @@
+import { ElementRef, EventEmitter } from '@angular/core';
+import { Ang2AutocompleteService } from './ang2-autocomplete.service';
+import * as i0 from "@angular/core";
+export declare class Ang2AutocompleteComponent {
+    getListService: Ang2AutocompleteService;
+    private elementRef;
+    pendingRequest: any;
+    statesss: string;
+    query: string;
+    activeElement: number;
+    keyName: string;
+    source: any;
+    placeholder: string;
+    listFormatter: any;
+    pathToArray: string;
+    urlParamName: string;
+    labelName: string;
+    minCharLength: number;
+    onSelectionChange: EventEmitter<any>;
+    constructor(getListService: Ang2AutocompleteService, elementRef: ElementRef);
+    handleClick(event: any): void;
+    getDataFromArray(data: any): void;
+    getDataFromObject(res: any): void;
+    getDataFromUrl(): void;
+    isArray(): boolean;
+    isObject(): boolean;
+    filter(e: any): void;
+    getFormattedList(data: any): any;
+    defaultListFormatter(data: any): string;
+    focusout(): void;
+    select(item: any): void;
+    focusOnOptions(e: any): void;
+    static ɵfac: i0.ɵɵFactoryDeclaration<Ang2AutocompleteComponent, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<Ang2AutocompleteComponent, "ang2-autocomplete", never, { "keyName": { "alias": "keyName"; "required": false; }; "source": { "alias": "source"; "required": false; }; "placeholder": { "alias": "placeholder"; "required": false; }; "listFormatter": { "alias": "listFormatter"; "required": false; }; "pathToArray": { "alias": "pathToArray"; "required": false; }; "urlParamName": { "alias": "urlParamName"; "required": false; }; "labelName": { "alias": "labelName"; "required": false; }; "minCharLength": { "alias": "minCharLength"; "required": false; }; }, { "onSelectionChange": "onSelectionChange"; }, never, never, true, never>;
+}
