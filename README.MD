@@ -1,7 +1,7 @@
 # ang2-autocomplete
 
 
-##Angular2 Auto Complete
+Angular2 Auto Complete
 
 
 ## Installation
@@ -13,7 +13,8 @@ $ npm install ang2-autocomplete --save
 ```
 
 you need angular 19 to use this library
- add `provideHttpClient` in your  `app.config.ts`:
+
+Add `provideHttpClient` in your  `app.config.ts`:
 ```typescript
 import { provideHttpClient } from '@angular/common/http';
 export const appConfig: ApplicationConfig = {
@@ -23,7 +24,7 @@ export const appConfig: ApplicationConfig = {
 };
 ```
 
-and then from your Angular `AppComponent`:
+Angular component sample `AppComponent`:
 
 ```typescript
 import { Component } from '@angular/core';
@@ -101,7 +102,7 @@ FormatterObject(Obj:any){
 }
 ```
 
-## Usage it in your code
+## HTML code
 
 ```xml
 <!-- <div>
