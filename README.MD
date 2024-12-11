@@ -1,9 +1,6 @@
 # ang2-autocomplete
 
 
-Angular2 Auto Complete
-
-
 ## Installation
 
 To install this library, run:
@@ -102,7 +99,7 @@ FormatterObject(Obj:any){
 }
 ```
 
-## HTML code
+HTML code
 
 ```xml
 <!-- <div>
