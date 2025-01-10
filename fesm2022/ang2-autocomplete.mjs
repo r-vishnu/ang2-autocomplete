@@ -14,8 +14,10 @@ class Ang2AutocompleteService {
         this.http = http;
     }
     searchUser(param, sourceName, urlParamName) {
-        var params = new HttpParams();
-        params.set(urlParamName, "" + param);
+        // var params = new HttpParams();
+        // params.set(urlParamName,  param);
+        console.log(urlParamName, " ****************** ", param);
+        const params = new HttpParams({ fromString: `${urlParamName}=${param}` });
         // return this.http.get(sourceName, { "search": params })
         //     .map(function (res) { return res.json(); });
         return this.http.get(sourceName, { params: params });
@@ -65,13 +67,18 @@ class Ang2AutocompleteComponent {
         this.statesss = 'in';
     }
     getDataFromObject(res) {
-        let pathArray = this.pathToArray.split(".");
-        let raw = res;
-        for (let i = 0; i < pathArray.length; i++) {
-            let a = pathArray[i];
-            raw = raw[a];
+        if (this.pathToArray) {
+            let pathArray = this.pathToArray.split(".");
+            let raw = res;
+            for (let i = 0; i < pathArray.length; i++) {
+                let a = pathArray[i];
+                raw = raw[a];
+            }
+            this.getDataFromArray(raw);
         }
-        this.getDataFromArray(raw);
+        else {
+            this.getDataFromArray(res);
+        }
     }
     ;
     getDataFromUrl() {
@@ -79,7 +86,10 @@ class Ang2AutocompleteComponent {
             this.pendingRequest.unsubscribe();
         }
         this.pendingRequest = this.getListService.searchUser(this.query.toLowerCase(), this.source, this.urlParamName)
-            .subscribe((res) => this.getDataFromObject(res));
+            .subscribe((res) => {
+            console.log(res);
+            this.getDataFromObject(res);
+        });
     }
     ;
     isArray() {
