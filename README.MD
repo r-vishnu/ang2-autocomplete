@@ -102,54 +102,74 @@ FormatterObject(Obj:any){
 HTML code
 
 ```xml
-<!-- <div>
+ <div>
     <h2>Data From Array of objects</h2>
     <ang2-autocomplete
-[source]="arrayOfKeyValues"
-[listFormatter]="FormatterArrayObj"
-keyName="value"
-(onSelectionChange)="onSelectionChange($event)"
-labelName="search data From Array of objects"
-placeholder="search"
-></ang2-autocomplete>
-  </div> -->
-
-
-
+   [source]="arrayOfKeyValues"
+   [listFormatter]="FormatterArrayObj"
+   keyName="value"
+   (onSelectionChange)="onSelectionChange($event)"
+   labelName="search data From Array of objects"
+   placeholder="search"
+   ></ang2-autocomplete>
+</div>  
   
-  
-  
-    <!-- <div>
+<div>
     <h2>Data From Array</h2>
     <ang2-autocomplete
-[source]="array"
-[listFormatter]="FormatterArray"
-(onSelectionChange)="onSelectionChange($event)"
-labelName="search data From Array"
-placeholder="search Data From Array"
-></ang2-autocomplete>
-  </div> -->
+   [source]="array"
+   [listFormatter]="FormatterArray"
+   (onSelectionChange)="onSelectionChange($event)"
+   labelName="search data From Array"
+   placeholder="search Data From Array"
+   ></ang2-autocomplete>
+</div>  
   
-  
-  <div>
+<div>
     <h2>Data From Object Array</h2>
     <ang2-autocomplete
-[source]="object"
-pathToArray="content.results"
-[listFormatter]="FormatterObject"
-keyName="formatted_address"
-(onSelectionChange)="onSelectionChange($event)"
-labelName="Data From Object Array"
-placeholder="search"
-></ang2-autocomplete>
-  </div>
+   [source]="object"
+   pathToArray="content.results"
+   [listFormatter]="FormatterObject"
+   keyName="formatted_address"
+   (onSelectionChange)="onSelectionChange($event)"
+   labelName="Data From Object Array"
+   placeholder="search"
+   ></ang2-autocomplete>
+</div>
+
+<div>
+    <h2>Data From Object Array</h2>
+    <ang2-autocomplete
+   [source]="object"
+   pathToArray="content.results"
+   [listFormatter]="FormatterObject"
+   keyName="formatted_address"
+   (onSelectionChange)="onSelectionChange($event)"
+   labelName="Data From Object Array"
+   placeholder="search"
+   ></ang2-autocomplete>
+</div>
+
+<div>
+    <h2>Data From Array</h2>
+    <ang2-autocomplete
+   source="http://localhost:3000/status"
+   (onSelectionChange)="onSelectionChange($event)"
+   labelName="search data From URL"
+   urlParamName="search"
+   pathToArray="content.results"
+   placeholder="search Data From URL"
+   keyName="formatted_address"
+   ></ang2-autocomplete>
+</div>
 
 ```
 
 ## attributes
 
 ```xml
-source              :  array or string or object contains array, required. data source for dropdown list
+source              :  array or string or object contains array or url from which we get data, required. data source for dropdown list
 placeholder         : string, autocomplete input guide text
 listFormatter       : function name, custom list formatting function.e.g. 'myListFormatter', not 'myListFormatter()'
 pathToArray       : string, e.g., data.myList, path to array data in http response or in object contains array
